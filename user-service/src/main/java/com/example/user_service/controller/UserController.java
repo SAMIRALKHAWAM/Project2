@@ -62,4 +62,10 @@ public class UserController {
         }
         return user.getId();
     }
+
+
+        @GetMapping("/test")
+    public String gettest() {
+       return "test";
+    }
 }

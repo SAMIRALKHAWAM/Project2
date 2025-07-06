@@ -25,5 +25,4 @@ public class Payment {
 
     private Long subscriptionId;
 
-    private BigDecimal amount;
 }

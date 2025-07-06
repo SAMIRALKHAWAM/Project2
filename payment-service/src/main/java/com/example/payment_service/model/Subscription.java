@@ -1,6 +1,8 @@
 package com.example.payment_service.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -24,7 +26,8 @@ public class Subscription {
 
     private Long courseId;
 
-    private String status; // e.g. PENDING, ACTIVE, CANCELLED
+    @Enumerated(EnumType.STRING)
+   private SubscriptionStatusEnum status;
 
     private Long paymentId;
 }

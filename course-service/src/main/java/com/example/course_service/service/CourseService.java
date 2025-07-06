@@ -71,7 +71,6 @@ public List<Course> getAllCourses(@RequestParam(required = false) String status)
         Course course = courseRepository.findById(courseId)
                 .orElseThrow(() -> new EntityNotFoundException("Course not found with id: " + courseId));
 
-        // التحقق من حالة الدورة
         if (!course.getStatus().equals(CourseStatus.APPROVED)) {
             throw new IllegalStateException("Course status is not APPROVED");
         }
